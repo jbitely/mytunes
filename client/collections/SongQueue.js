@@ -6,12 +6,16 @@ var SongQueue = Songs.extend({
       if(this.length === 1){
         this.playFirst();
       }
-    },this)
-
+    },this),
+    this.on('ended', function(){
+      this.remove(this.at(0));
+      if(this.length > 0){
+        this.playFirst();
+      }
+    }, this)
   },
+
   playFirst: function(){
-
-
   }
   // play first song method (playFirst)
 
