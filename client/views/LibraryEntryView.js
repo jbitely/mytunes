@@ -3,7 +3,7 @@ var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
+  template: _.template('<td class="artist">(<%= artist %>)</td><td class="title"><%= title %></td>'),
 
   events: {
     'click': function() {
@@ -12,7 +12,7 @@ var LibraryEntryView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.html(this.template(this.model.attributes));
+    return this.$el.addClass('song').html(this.template(this.model.attributes));
   }
 
 });

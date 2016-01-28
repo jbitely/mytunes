@@ -1,0 +1,49 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  position: relative;
+}
+/* full music app */
+.musicapp{
+  position: absolute;
+  width: 350px;
+  left: 50%;
+  margin-left: -175px;
+}
+/* player controls*/
+.audio{
+  width: 350px;
+}
+
+/* all songlists */
+.songlist{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  text-align: left;
+}
+/* songlist heading */
+
+/* library */
+.library{
+  background-color: #FF00C6;
+}
+/* queue */
+.queue{
+  color: #ffccf3;
+  background-color: #66004f;
+}
+/* all songs */
+.song{}
+/* artist */
+.artist{}
+/* title */
+.title{}
