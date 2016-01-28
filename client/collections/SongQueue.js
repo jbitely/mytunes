@@ -19,14 +19,9 @@ var SongQueue = Songs.extend({
 
   },
 
-  playFirst: function(){
-  }
   // play first song method (playFirst)
-
-  // remove song method
-  // removeSong: function(song){
-  //   //
-  // }
-
+  playFirst: function(){
+    this.at(0).play();
+  }
 
 });
