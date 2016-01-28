@@ -4,6 +4,7 @@ var SongQueueView = Backbone.View.extend({
   tagName: "table",
 
   initialize: function() {
+    this.collection.on('add', this.render, this);
     this.render();
   },
 
@@ -18,3 +19,7 @@ var SongQueueView = Backbone.View.extend({
   }
 
 });
+
+
+// this.THING.on('EVENTNAME', callback, context)
+// this.listenTo('THINGTOLISTENTO', 'EVENTNAME', callback)
