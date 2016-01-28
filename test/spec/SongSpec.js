@@ -24,14 +24,14 @@ describe('SongModel', function() {
     });
   });
 
-  xdescribe('dequeue', function() {
+  describe('dequeue', function() {
     it('triggers a "dequeue" event', function() {
       model.dequeue();
       expect(model.trigger).to.have.been.calledWith('dequeue', model);
     });
   });
 
-  xdescribe('ended', function() {
+  describe('ended', function() {
     it('triggers an "ended" event', function() {
       model.play();
       model.ended();
