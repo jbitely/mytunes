@@ -20,5 +20,4 @@ var AppView = Backbone.View.extend({
       this.songQueueView.$el
     ]);
   }
-
 });

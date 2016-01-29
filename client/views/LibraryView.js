@@ -5,6 +5,7 @@ var LibraryView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
+    this.collection.on('play', this.render, this); // rerender library on play to update play counter
   },
 
   render: function(){

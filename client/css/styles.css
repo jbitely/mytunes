@@ -11,13 +11,13 @@ body{
 /* full music app */
 .musicapp{
   position: absolute;
-  width: 350px;
+  width: 400px;
   left: 50%;
-  margin-left: -175px;
+  margin-left: -200px;
 }
 /* player controls*/
 .audio{
-  width: 350px;
+  width: 400px;
 }
 
 /* all songlists */
@@ -50,3 +50,8 @@ body{
 
 /* title */
 .title{}
+
+/* play count */
+.playcount{
+  padding-left: 10px;
+}
