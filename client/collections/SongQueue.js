@@ -1,6 +1,5 @@
 // SongQueue.js - Defines a backbone model class for the song queue.
-window.SongQueue = Songs.extend({
-  localStorage: new Backbone.LocalStorage("SongQueue"),
+var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on('add', this.enqueue, this);
@@ -9,6 +8,7 @@ window.SongQueue = Songs.extend({
   },
   // on enqueue, play the song if it is the first song
   enqueue: function(song){
+    song.save();
     if(this.length === 1){
       this.playFirst();
     }
@@ -16,10 +16,10 @@ window.SongQueue = Songs.extend({
   // on dequeue, remove the song; if it is the first song play next
   dequeue: function(song){
     if(song === this.at(0)){
+      song.destroy();
       this.playNext();
     } else {
-      this.remove(song);
-    }
+      song.destroy();    }
   },
   // play first song
   playFirst: function(){
@@ -27,7 +27,7 @@ window.SongQueue = Songs.extend({
   },
   // play next song
   playNext: function(){
-    this.remove(this.at(0));
+    // this.remove(this.at(0));
     if(this.length > 0){
       this.playFirst();
     } else {
